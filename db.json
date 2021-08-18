@@ -1,0 +1,47 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "SmartPhone",
+      "createAt": 164578,
+      "updateAt": 112233
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone X",
+      "createAt": 312321,
+      "updateAt": 323212,
+      "categoryId": 1,
+      "salePrice": 150
+    },
+    {
+      "name": "Samsung",
+      "createAt": 1629165079429,
+      "updatedAt": 1629165079429,
+      "id": 3
+    },
+    {
+      "name": "Laptop",
+      "createAt": 1629165290748,
+      "updatedAt": 1629165290748,
+      "id": 4
+    },
+    {
+        "name": "tablet",
+        "createAt": 1629165290748,
+        "updatedAt": 1629165290748,
+        "id": 6
+    },
+    {
+        "name": "PC mini",
+        "createAt": 1629165290748,
+        "updatedAt": 1629165290748,
+        "id": 6
+      }
+  ],
+  "profile": {
+    "name": "Hoa"
+  }
+}
