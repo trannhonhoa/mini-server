@@ -22,9 +22,27 @@ server.use((req, res, next) => {
   // Continue to JSON Server router
   next()
 })
+router.render = (req, res) =>{
+  const header = res.getHeaders();
+  const totalCountHeaders = header['x-total-count'];
+  if(req.method === 'GET' && totalCountHeaders){
+    const queryParams = queryString.parse(req._parsedUrl.query);
+    console.log(queryParams);
+    const result = {
+      data: res.locals.data,
+      pagination :{
+        _page: Number.parseInt(queryParams._page) || 1,
+        _limit: Number.parseInt(queryParams._limit) || 10,
+        _totalRows: Number.parseInt(totalCountHeaders)
 
+      }
+    }
+    return res.jsonp(result);
+  }
+  res.jsonp(res.locals.data);
+}
 // Use default router
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 3000
 server.use("/api",router)
 server.listen(PORT, () => {
   console.log('JSON Server is running')

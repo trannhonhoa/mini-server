@@ -1,7 +1,7 @@
 @baseUrl = http://localhost:3000/api
 #categories
 # @name getAllCategories
-GET {{baseUrl}}/products?id=6
+GET {{baseUrl}}/products
 ###
 
 
